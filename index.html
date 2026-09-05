@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1</title>
+    <meta
+        name="description"
+        content="The main page of a student's educational landing page."
+    >
+    <title>Laboratory 2 — Home</title>
+    <link rel="icon" href="assets/images/favicon.ico">
 </head>
 <body>
-    <p>Student: Oleksandr Krivokorytov</p>
-    <p>Group: 6.1214-pi2</p>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <h1>Oleksandra Krivokorytova's Educational Landing Page</h1>
+
+        <nav class="site-navigation" aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About me</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <article class="news-article">
+            <header>
+                <h2>Student News</h2>
+                <p>
+                    This page was created as part of Laboratory 2
+                    for a web development course.
+                </p>
+            </header>
+
+            <figure>
+                <img
+                    src="assets/images/student.jpg"
+                    alt="Photo of student Oleksandra Krivokorytova"
+                    width="400"
+                >
+                <figcaption>
+                    Oleksandr Krivokorytov — student of group 6.1214-pi2.
+                </figcaption>
+            </figure>
+        </article>
+
+        <section aria-labelledby="advantages-title">
+            <h3 id="advantages-title">Benefits of Learning</h3>
+            <ul>
+                <li>Developing HTML and web development skills.</li>
+                <li>Practicing the creation of multi-page websites.</li>
+                <li>Learning about accessibility and semantic markup.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="schedule-title">
+            <h3 id="schedule-title">Study Plan</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Laboratory</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>№1</td>
+                        <td>Introduction to HTML</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>№2</td>
+                        <td>HTML structure and forms</td>
+                        <td>Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <h2>Useful Links</h2>
+        <ul>
+            <li>
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    HTML documentation on MDN
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://validator.w3.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    HTML Validator
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <footer class="site-footer">
+        <p>Student: Oleksandr Krivokorytov</p>
+        <p>Group: 6.1214-pi2</p>
+    </footer>
 </body>
 </html>

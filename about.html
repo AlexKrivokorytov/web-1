@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="Information about student Oleksandr Kryvokorytov."
-    >
-    <title>Laboratory 2 — About Me</title>
+    <meta name="description" content="Information about student Alexander Krivokorytov.">
+    <title>Lab 3 — About me</title>
     <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page">
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
-        <h1>About Me</h1>
-
-        <nav class="site-navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="about.html" aria-current="page">About Me</a>
-                </li>
-                <li><a href="contacts.html">Contacts</a></li>
+    <header class="header">
+        <h1 class="header__title">About me</h1>
+        <nav class="navigation" aria-label="Main navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="index.html">Home</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link--active" href="about.html" aria-current="page">About me</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main">
-        <article>
-            <header>
-                <h2>Brief Information</h2>
-            </header>
-
-            <p>
-                My name is Oleksandr Kryvokorytov. I am a student in group
-                6.1214-pi2 and study the basics of website development.
-            </p>
-            <p>
-                In this laboratory assignment, I expanded the simple page from
-                the first laboratory assignment by adding semantic HTML tags,
-                navigation between pages, and a form with built-in validation.
-            </p>
+    <main class="main" id="main">
+        <article class="about-article">
+            <h2 class="about-article__title">Brief information</h2>
+            <p class="about-article__text">My name is Alexander Krivokorytov. I study in group 6.1214-pi2 and learn the basics of web development.</p>
+            <p class="about-article__text">In this laboratory work, I added external CSS styles and organized the classes according to the BEM methodology.</p>
         </article>
 
-        <section aria-labelledby="skills-title">
-            <h3 id="skills-title">My Skills</h3>
-            <ol>
-                <li>Basic HTML markup.</li>
-                <li>Working with Git and GitHub.</li>
-                <li>Creating multi-page websites.</li>
+        <section class="skills" aria-labelledby="skills-title">
+            <h2 class="skills__title" id="skills-title">My skills</h2>
+            <ol class="skills__list">
+                <li class="skills__item">Basic HTML markup.</li>
+                <li class="skills__item">Working with Git and GitHub.</li>
+                <li class="skills__item">Creating multi-page websites.</li>
+                <li class="skills__item">Using CSS and BEM.</li>
             </ol>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>Student: Oleksandr Kryvokorytov</p>
-        <p>Group: 6.1214-pi2</p>
+    <aside class="sidebar sidebar--values">
+        <h2 class="sidebar__title">My values</h2>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Continuous learning</li>
+            <li class="sidebar__item">Practical results</li>
+            <li class="sidebar__item">Attention to detail</li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p class="footer__text">Student: Alexander Krivokorytov</p>
+        <p class="footer__text">Group: 6.1214-pi2</p>
     </footer>
 </body>
 </html>

@@ -3,94 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Main page of the student's learning website.">
-    <title>Lab 3 — Home</title>
-    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Student Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page">
-    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="header">
-        <h1 class="header__title">Student website of Alexander Krivokorytov</h1>
+<body>
+    <div class="layout">
 
-        <nav class="navigation" aria-label="Main navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item">
-                    <a class="navigation__link navigation__link--active" href="index.html" aria-current="page">Home</a>
+        <header class="header">
+            <h1 class="header__title">Student Website</h1>
+
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li>
+                        <a class="navigation__link navigation__link--active" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="navigation__link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <h2 class="sidebar__title">Useful links</h2>
+
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="https://github.com/AlexKrivokorytov">GitHub</a>
                 </li>
-                <li class="navigation__item">
-                    <a class="navigation__link" href="about.html">About me</a>
-                </li>
-                <li class="navigation__item">
-                    <a class="navigation__link" href="contacts.html">Contacts</a>
+                <li class="sidebar__item">
+                    <a href="https://developer.mozilla.org/">MDN</a>
                 </li>
             </ul>
-        </nav>
-    </header>
+        </aside>
 
-    <main class="main" id="main">
-        <article class="article">
-            <header class="article__header">
-                <h2 class="article__title">Student news</h2>
-                <p class="article__text">This page was created as part of laboratory work No. 3.</p>
-            </header>
+        <main class="main">
+            <h2>Latest News</h2>
 
-            <figure class="media article__media media--framed">
-                <img class="media__image" src="assets/images/student.jpg" alt="Student photo" width="400">
-                <figcaption class="media__caption">Alexander Krivokorytov — student of group 6.1214-pi2.</figcaption>
-            </figure>
-        </article>
+            <section class="news">
 
-        <section class="services" aria-labelledby="services-title">
-            <h2 class="services__title" id="services-title">Learning benefits</h2>
-            <ul class="services__list">
-                <li class="services__item">Developing HTML and CSS skills.</li>
-                <li class="services__item">Practical website creation.</li>
-                <li class="services__item">Introduction to the BEM methodology.</li>
-            </ul>
+                <article class="news__card">
+                    <img class="news__image"
+                         src="assets/images/student.jpg"
+                         alt="Student">
 
-            <h3 class="services__subtitle">Study plan</h3>
-            <table class="services__table">
-                <thead>
-                    <tr class="services__row">
-                        <th class="services__header" scope="col">Laboratory</th>
-                        <th class="services__header" scope="col">Topic</th>
-                        <th class="services__header" scope="col">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="services__row">
-                        <td class="services__cell">No. 1</td>
-                        <td class="services__cell">Introduction to HTML</td>
-                        <td class="services__cell">Completed</td>
-                    </tr>
-                    <tr class="services__row">
-                        <td class="services__cell">No. 2</td>
-                        <td class="services__cell">HTML structure and forms</td>
-                        <td class="services__cell">Completed</td>
-                    </tr>
-                    <tr class="services__row">
-                        <td class="services__cell">No. 3</td>
-                        <td class="services__cell">CSS and BEM</td>
-                        <td class="services__cell">In progress</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+                    <h3 class="news__title">Web Development</h3>
 
-    <aside class="sidebar sidebar--links">
-        <h2 class="sidebar__title">Useful links</h2>
-        <ul class="sidebar__list">
-            <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS documentation on MDN</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">HTML Validator</a></li>
-        </ul>
-    </aside>
+                    <p class="news__description">
+                        Learning HTML and CSS.
+                    </p>
 
-    <footer class="footer">
-        <p class="footer__text">Student: Alexander Krivokorytov</p>
-        <p class="footer__text">Group: 6.1214-pi2</p>
-    </footer>
+                    <div class="news__meta">
+                        <span>30.09.2026</span>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+
+                <article class="news__card">
+                    <img class="news__image"
+                         src="assets/images/student.jpg"
+                         alt="Student">
+
+                    <h3 class="news__title">CSS Layout</h3>
+
+                    <p class="news__description">
+                        Learning Flexbox and Grid.
+                    </p>
+
+                    <div class="news__meta">
+                        <span>30.09.2026</span>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+
+                <article class="news__card">
+                    <img class="news__image"
+                         src="assets/images/student.jpg"
+                         alt="Student">
+
+                    <h3 class="news__title">GitHub</h3>
+
+                    <p class="news__description">
+                        Practicing Git and GitHub.
+                    </p>
+
+                    <div class="news__meta">
+                        <span>30.09.2026</span>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">Student: Alexander Krivokorytov</p>
+            <p class="footer__text">Group: 6.1214-pi2</p>
+        </footer>
+
+    </div>
 </body>
 </html>

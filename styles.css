@@ -19,8 +19,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Main Grid */
-
 .layout {
     min-height: 100vh;
     display: grid;
@@ -121,8 +119,6 @@ body {
     margin: 5px;
 }
 
-/* News */
-
 .news {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -160,16 +156,12 @@ body {
     padding-top: 15px;
 }
 
-/* About */
-
 .about {
     padding: 20px;
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 12px;
 }
-
-/* Contacts */
 
 .contact-form {
     max-width: 700px;
@@ -202,7 +194,19 @@ body {
     cursor: pointer;
 }
 
-/* Responsive */
+.contact-form :user-invalid {
+    border-color: #b42318;
+}
+
+.contact-form__hint {
+    display: none;
+    color: #b42318;
+    font-size: 0.9em;
+}
+
+#phone:user-invalid + .contact-form__hint {
+    display: block;
+}
 
 @media (max-width: 800px) {
     .layout {

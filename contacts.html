@@ -50,7 +50,8 @@
 
                 <div class="contact-form__item">
                     <label class="contact-form__label" for="phone">Phone:</label>
-                    <input class="contact-form__input" id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="\+380[0-9]{9}" title="Enter a number in the format +380XXXXXXXXX">
+                    <input class="contact-form__input" id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="\+380[0-9]{9}" title="Enter a number in the format +380XXXXXXXXX" aria-describedby="phone-hint">
+                    <small class="contact-form__hint" id="phone-hint">Format: +380XXXXXXXXX</small>
                 </div>
 
                 <div class="contact-form__item">

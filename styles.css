@@ -1,11 +1,27 @@
 :root {
     --bg: #f2f5f9;
     --white: #ffffff;
+    --surface: #ffffff;
     --blue: #2457a6;
     --dark-blue: #173d78;
     --yellow: #f0c04a;
     --text: #263238;
     --border: #d5deea;
+    --font-size-body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --font-size-heading: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    --font-size-card-title: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #111827;
+        --surface: #1f2937;
+        --blue: #6495ed;
+        --dark-blue: #0b1420;
+        --yellow: #eabf4a;
+        --text: #e5e7eb;
+        --border: #374151;
+    }
 }
 
 * {
@@ -17,17 +33,45 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: Arial, sans-serif;
+    font-size: var(--font-size-body);
+}
+
+h1,
+h2 {
+    font-size: var(--font-size-heading);
+}
+
+h3 {
+    font-size: var(--font-size-card-title);
 }
 
 .layout {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: grid;
-    grid-template-columns: 220px 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
-        "header header"
-        "aside main"
-        "footer footer";
+        "header"
+        "aside"
+        "main"
+        "footer";
+}
+
+@media (min-width: 640px) {
+    .layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "aside main"
+            "footer footer";
+    }
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 280px minmax(0, 1fr);
+    }
 }
 
 .header {
@@ -69,16 +113,16 @@ body {
 .sidebar {
     grid-area: aside;
     padding: 20px;
-    background: var(--white);
+    background: var(--surface);
     border-right: 1px solid var(--border);
 }
 
 .sidebar__block {
     padding: 16px;
-    background: #f7f9fc;
+    background: color-mix(in srgb, var(--surface) 92%, #fff 8%);
     border: 1px solid var(--border);
     border-radius: 12px;
-		margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .sidebar__title {
@@ -95,6 +139,14 @@ body {
 
 .sidebar__item {
     margin: 0;
+}
+
+.sidebar__item a,
+.news__meta a {
+    padding: 4px 8px;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: 4px;
 }
 
 .sidebar__text {
@@ -121,7 +173,7 @@ body {
 
 .news {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 20px;
 }
 
@@ -129,18 +181,25 @@ body {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    background: var(--white);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
 }
 
-.news__image {
-    width: calc(100% + 30px);
-    height: 160px;
+.news__media {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: clip;
     margin: -15px -15px 0;
+    border-radius: 8px;
+}
+
+.news__image {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 8px;
 }
 
 .news__title {
@@ -155,12 +214,14 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: auto;
-    padding-top: 15px;
+    padding: 10px;
+    background: color-mix(in srgb, var(--surface) 92%, #fff 8%);
+    border-radius: 8px;
 }
 
 .about {
     padding: 20px;
-    background: var(--white);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
 }
@@ -168,7 +229,7 @@ body {
 .contact-form {
     max-width: 700px;
     padding: 20px;
-    background: var(--white);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
 }
@@ -208,16 +269,4 @@ body {
 
 #phone:user-invalid + .contact-form__hint {
     display: block;
-}
-
-@media (max-width: 800px) {
-    .layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-areas:
-            "header"
-            "aside"
-            "main"
-            "footer";
-    }
 }

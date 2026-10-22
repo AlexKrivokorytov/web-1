@@ -1,124 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+{{#> layout pageTitle="Student Website" activeHome=true activeAbout=false activeContacts=false}}
+    <h2>Latest News</h2>
 
-<body>
-    <div class="layout">
-
-        <header class="header">
-            <h1 class="header__title">Student Website</h1>
-
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li>
-                        <a class="navigation__link navigation__link--active" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="navigation__link" href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a class="navigation__link" href="contacts.html">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <aside class="sidebar">
-            <div class="sidebar__block">
-                <h2 class="sidebar__title">Links</h2>
-                <ul class="sidebar__list">
-                    <li class="sidebar__item"><a href="https://github.com/AlexKrivokorytov" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
-                    <li class="sidebar__item"><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN docs</a></li>
-                    <li class="sidebar__item"><a href="https://open.spotify.com/user/31li5g626zbhc4ka5itm4pggdjoa" target="_blank" rel="noopener noreferrer">Spotify</a></li>
-                </ul>
+    <section class="news">
+        <article class="news__card">
+            <picture class="news__media">
+                <source srcset="/src/assets/images/student.avif" type="image/avif">
+                <source srcset="/src/assets/images/student.webp" type="image/webp">
+                <img class="news__image" src="/src/assets/images/student.jpg" alt="Student">
+            </picture>
+            <h3 class="news__title">Web Development</h3>
+            <p class="news__description">Learning HTML and CSS.</p>
+            <div class="news__meta">
+                <span>30.09.2026</span>
+                <a href="#">Read more</a>
             </div>
+        </article>
 
-            <div class="sidebar__block">
-                <h2 class="sidebar__title">Notes</h2>
-                <p class="sidebar__text">Learning web basics and improving layout skills.</p>
+        <article class="news__card">
+            <picture class="news__media">
+                <source srcset="/src/assets/images/student.avif" type="image/avif">
+                <source srcset="/src/assets/images/student.webp" type="image/webp">
+                <img class="news__image" src="/src/assets/images/student.jpg" alt="Student">
+            </picture>
+            <h3 class="news__title">CSS Layout</h3>
+            <p class="news__description">Learning Flexbox and Grid.</p>
+            <div class="news__meta">
+                <span>30.09.2026</span>
+                <a href="#">Read more</a>
             </div>
-        </aside>
+        </article>
 
-        <main class="main">
-            <h2>Latest News</h2>
-
-            <section class="news">
-
-                <article class="news__card">
-                    <picture class="news__media">
-                        <source srcset="assets/images/student.avif" type="image/avif">
-                        <source srcset="assets/images/student.webp" type="image/webp">
-                        <img class="news__image"
-                             src="assets/images/student.jpg"
-                             alt="Student">
-                    </picture>
-
-                    <h3 class="news__title">Web Development</h3>
-
-                    <p class="news__description">
-                        Learning HTML and CSS.
-                    </p>
-
-                    <div class="news__meta">
-                        <span>30.09.2026</span>
-                        <a href="#">Read more</a>
-                    </div>
-                </article>
-
-                <article class="news__card">
-                    <picture class="news__media">
-                        <source srcset="assets/images/student.avif" type="image/avif">
-                        <source srcset="assets/images/student.webp" type="image/webp">
-                        <img class="news__image"
-                             src="assets/images/student.jpg"
-                             alt="Student">
-                    </picture>
-
-                    <h3 class="news__title">CSS Layout</h3>
-
-                    <p class="news__description">
-                        Learning Flexbox and Grid.
-                    </p>
-
-                    <div class="news__meta">
-                        <span>30.09.2026</span>
-                        <a href="#">Read more</a>
-                    </div>
-                </article>
-
-                <article class="news__card">
-                    <picture class="news__media">
-                        <source srcset="assets/images/student.avif" type="image/avif">
-                        <source srcset="assets/images/student.webp" type="image/webp">
-                        <img class="news__image"
-                             src="assets/images/student.jpg"
-                             alt="Student">
-                    </picture>
-
-                    <h3 class="news__title">GitHub</h3>
-
-                    <p class="news__description">
-                        Practicing Git and GitHub.
-                    </p>
-
-                    <div class="news__meta">
-                        <span>30.09.2026</span>
-                        <a href="#">Read more</a>
-                    </div>
-                </article>
-
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p class="footer__text">Student: Alexander Krivokorytov | Group: 6.1214-pi2 | ZNU, Zaporizhzhia, Ukraine | znu.edu.ua</p>
-        </footer>
-
-    </div>
-</body>
-</html>
+        <article class="news__card">
+            <picture class="news__media">
+                <source srcset="/src/assets/images/student.avif" type="image/avif">
+                <source srcset="/src/assets/images/student.webp" type="image/webp">
+                <img class="news__image" src="/src/assets/images/student.jpg" alt="Student">
+            </picture>
+            <h3 class="news__title">GitHub</h3>
+            <p class="news__description">Practicing Git and GitHub.</p>
+            <div class="news__meta">
+                <span>30.09.2026</span>
+                <a href="#">Read more</a>
+            </div>
+        </article>
+    </section>
+{{/layout}}

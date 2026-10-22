@@ -1,0 +1,34 @@
+<aside class="sidebar">
+    {{#if activeHome}}
+        <div class="sidebar__block">
+            <h2 class="sidebar__title">Links</h2>
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a href="https://github.com/AlexKrivokorytov" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
+                <li class="sidebar__item"><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN docs</a></li>
+                <li class="sidebar__item"><a href="https://open.spotify.com/user/31li5g626zbhc4ka5itm4pggdjoa" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+            </ul>
+        </div>
+        <div class="sidebar__block">
+            <h2 class="sidebar__title">Notes</h2>
+            <p class="sidebar__text">Learning web basics and improving layout skills.</p>
+        </div>
+    {{else if activeAbout}}
+        <div class="sidebar__block">
+            <h2 class="sidebar__title">Summary</h2>
+            <p class="sidebar__text">Student life, practice, and small web projects.</p>
+        </div>
+        <div class="sidebar__block">
+            <h2 class="sidebar__title">Focus</h2>
+            <p class="sidebar__text">HTML structure, CSS styling, and clean layouts.</p>
+        </div>
+    {{else}}
+        <div class="sidebar__block">
+            <h2 class="sidebar__title">Contact info</h2>
+            <p class="sidebar__text">Available for questions and collaboration.</p>
+        </div>
+        <div class="sidebar__block">
+            <h2 class="sidebar__title">Status</h2>
+            <p class="sidebar__text">Currently studying and improving front-end skills.</p>
+        </div>
+    {{/if}}
+</aside>

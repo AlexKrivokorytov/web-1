@@ -1,0 +1,25 @@
+:root {
+    --bg: #f2f5f9;
+    --white: #ffffff;
+    --surface: #ffffff;
+    --blue: #2457a6;
+    --dark-blue: #173d78;
+    --yellow: #f0c04a;
+    --text: #263238;
+    --border: #d5deea;
+    --font-size-body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --font-size-heading: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    --font-size-card-title: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #111827;
+        --surface: #1f2937;
+        --blue: #6495ed;
+        --dark-blue: #0b1420;
+        --yellow: #eabf4a;
+        --text: #e5e7eb;
+        --border: #374151;
+    }
+}

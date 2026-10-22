@@ -1,56 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="layout">
-
-        <header class="header">
-            <h1 class="header__title">Student Website</h1>
-
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li><a class="navigation__link" href="index.html">Home</a></li>
-                    <li><a class="navigation__link navigation__link--active" href="about.html">About</a></li>
-                    <li><a class="navigation__link" href="contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <aside class="sidebar">
-            <div class="sidebar__block">
-                <h2 class="sidebar__title">Summary</h2>
-                <p class="sidebar__text">Student life, practice, and small web projects.</p>
-            </div>
-
-            <div class="sidebar__block">
-                <h2 class="sidebar__title">Focus</h2>
-                <p class="sidebar__text">HTML structure, CSS styling, and clean layouts.</p>
-            </div>
-        </aside>
-
-        <main class="main">
-            <section class="about">
-                <h2>About me</h2>
-                <p>
-                    My name is Alexander Krivokorytov.
-                    I study software engineering.
-                </p>
-                <p>
-                    This page is maximum i can do, because i am lazy and dont want to spend much time.
-                </p>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p class="footer__text">Student: Alexander Krivokorytov | Group: 6.1214-pi2 | ZNU, Zaporizhzhia, Ukraine | znu.edu.ua</p>
-        </footer>
-
-    </div>
-</body>
-</html>
+{{#> layout pageTitle="About" activeHome=false activeAbout=true activeContacts=false}}
+    <section class="about">
+        <h2>About me</h2>
+        <p>
+            My name is Alexander Krivokorytov.
+            I study software engineering.
+        </p>
+        <p>
+            This page is maximum i can do, because i am lazy and dont want to spend much time.
+        </p>
+    </section>
+{{/layout}}

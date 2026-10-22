@@ -1,74 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+{{#> layout pageTitle="Contacts" activeHome=false activeAbout=false activeContacts=true}}
+    <h2>Contact form</h2>
+    <form class="contact-form">
+        <div class="contact-form__item">
+            <label for="name">Name</label>
+            <input class="contact-form__input" id="name" type="text">
+        </div>
 
-<body>
-    <div class="layout">
+        <div class="contact-form__item">
+            <label for="email">Email</label>
+            <input class="contact-form__input" id="email" type="email">
+        </div>
 
-        <header class="header">
-            <h1 class="header__title">Student Website</h1>
+        <div class="contact-form__item">
+            <label class="contact-form__label" for="phone">Phone:</label>
+            <input class="contact-form__input" id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="\+380[0-9]{9}" title="Enter a number in the format +380XXXXXXXXX" aria-describedby="phone-hint">
+            <small class="contact-form__hint" id="phone-hint">Format: +380XXXXXXXXX</small>
+        </div>
 
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li><a class="navigation__link" href="index.html">Home</a></li>
-                    <li><a class="navigation__link" href="about.html">About</a></li>
-                    <li><a class="navigation__link navigation__link--active" href="contacts.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="contact-form__item">
+            <label for="message">Message</label>
+            <textarea class="contact-form__textarea" id="message"></textarea>
+        </div>
 
-        <aside class="sidebar">
-            <div class="sidebar__block">
-                <h2 class="sidebar__title">Contact info</h2>
-                <p class="sidebar__text">Available for questions and collaboration.</p>
-            </div>
-
-            <div class="sidebar__block">
-                <h2 class="sidebar__title">Status</h2>
-                <p class="sidebar__text">Currently studying and improving front-end skills.</p>
-            </div>
-        </aside>
-
-        <main class="main">
-            <h2>Contact form</h2>
-
-            <form class="contact-form">
-                <div class="contact-form__item">
-                    <label for="name">Name</label>
-                    <input class="contact-form__input" id="name" type="text">
-                </div>
-
-                <div class="contact-form__item">
-                    <label for="email">Email</label>
-                    <input class="contact-form__input" id="email" type="email">
-                </div>
-
-                <div class="contact-form__item">
-                    <label class="contact-form__label" for="phone">Phone:</label>
-                    <input class="contact-form__input" id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="\+380[0-9]{9}" title="Enter a number in the format +380XXXXXXXXX" aria-describedby="phone-hint">
-                    <small class="contact-form__hint" id="phone-hint">Format: +380XXXXXXXXX</small>
-                </div>
-
-                <div class="contact-form__item">
-                    <label for="message">Message</label>
-                    <textarea class="contact-form__textarea" id="message"></textarea>
-                </div>
-
-                <button class="contact-form__button" type="submit">
-                    Send
-                </button>
-            </form>
-        </main>
-
-        <footer class="footer">
-            <p class="footer__text">Student: Alexander Krivokorytov | Group: 6.1214-pi2 | ZNU, Zaporizhzhia, Ukraine | znu.edu.ua</p>
-        </footer>
-
-    </div>
-</body>
-</html>
+        <button class="contact-form__button" type="submit">
+            Send
+        </button>
+    </form>
+{{/layout}}

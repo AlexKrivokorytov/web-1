@@ -1,0 +1,125 @@
+.layout {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer";
+}
+
+@media (min-width: 640px) {
+    .layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "aside main"
+            "footer footer";
+    }
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 280px minmax(0, 1fr);
+    }
+}
+
+.header {
+    grid-area: header;
+    padding: 20px 5%;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: 0;
+}
+
+.header__title {
+    margin: 0 0 15px;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation__link {
+    display: block;
+    padding: 8px 12px;
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+}
+
+.navigation__link:hover,
+.navigation__link--active {
+    background: var(--yellow);
+    color: var(--text);
+}
+
+.sidebar {
+    grid-area: aside;
+    padding: 20px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+}
+
+.sidebar__block {
+    padding: 16px;
+    background: color-mix(in srgb, var(--surface) 92%, #fff 8%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.sidebar__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.sidebar__list {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+}
+
+.sidebar__item {
+    margin: 0;
+}
+
+.sidebar__item a,
+.news__meta a {
+    padding: 4px 8px;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: 4px;
+}
+
+.sidebar__text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.main {
+    grid-area: main;
+    padding: 25px;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 20px;
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer__text {
+    margin: 5px;
+}

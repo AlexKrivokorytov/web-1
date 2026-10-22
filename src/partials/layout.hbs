@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+    <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+    <div class="layout">
+        {{> header siteName=siteName activeHome=activeHome activeAbout=activeAbout activeContacts=activeContacts}}
+        {{> sidebar activeHome=activeHome activeAbout=activeAbout activeContacts=activeContacts}}
+        <main class="main">
+            {{> @partial-block}}
+        </main>
+        {{> footer}}
+    </div>
+</body>
+</html>

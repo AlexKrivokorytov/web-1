@@ -1,11 +1,13 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 import handlebars from 'vite-plugin-handlebars';
 
 const root = process.cwd();
 
 export default defineConfig({
     plugins: [
+        tailwindcss(),
         handlebars({
             partialDirectory: resolve(root, 'src/partials'),
             context: {

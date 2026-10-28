@@ -1,0 +1,42 @@
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+@theme static {
+  --color-brand-bg: var(--bg);
+  --color-brand-surface: var(--surface);
+  --color-brand-blue: var(--blue);
+  --color-brand-blue-dark: var(--dark-blue);
+  --color-brand-yellow: var(--yellow);
+  --color-brand-text: var(--text);
+  --color-brand-border: var(--border);
+  --color-brand-white: var(--white);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    font-size: var(--font-size-body);
+  }
+
+  h1,
+  h2 {
+    font-size: var(--font-size-heading);
+  }
+
+  h3 {
+    font-size: var(--font-size-card-title);
+  }
+}
+
+@layer components {
+  .news__card--tailwind-demo {
+    @apply flex flex-col rounded-xl border border-brand-border bg-brand-surface p-3.75;
+  }
+
+  .news__meta--tailwind-demo {
+    @apply mt-auto flex items-center justify-between rounded-lg border border-brand-border bg-brand-bg p-2.5;
+  }
+}

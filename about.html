@@ -1,4 +1,4 @@
-{{#> layout pageTitle="About" activeHome=false activeAbout=true activeContacts=false}}
+{{#> layout pageTitle="About" pageCode="about" activeHome=false activeAbout=true activeContacts=false}}
     <section class="about">
         <h2>About me</h2>
         <p>
@@ -8,5 +8,17 @@
         <p>
             This page is maximum i can do, because i am lazy and dont want to spend much time.
         </p>
+    </section>
+    <section class="team">
+        <h2>Our team</h2>
+        <div class="team__list" aria-live="polite">Loading employees...</div>
+        <template id="employee-card-tpl">
+            <article class="team__card">
+                <img class="team__photo" data-photo alt="">
+                <h3 class="team__name" data-name></h3>
+                <p class="team__role" data-role></p>
+                <a class="team__profile" data-cta target="_blank" rel="noopener noreferrer">View profile</a>
+            </article>
+        </template>
     </section>
 {{/layout}}

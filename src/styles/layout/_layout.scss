@@ -39,6 +39,25 @@
     margin: 0 0 15px;
 }
 
+.header__controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .navigation__list {
     display: flex;
     gap: 10px;

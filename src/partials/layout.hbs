@@ -6,7 +6,7 @@
     <title>{{pageTitle}}</title>
     <script type="module" src="/src/main.js"></script>
 </head>
-<body>
+<body data-page="{{pageCode}}">
     <div class="layout">
         {{> header siteName=siteName activeHome=activeHome activeAbout=activeAbout activeContacts=activeContacts}}
         {{> sidebar activeHome=activeHome activeAbout=activeAbout activeContacts=activeContacts}}

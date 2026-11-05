@@ -4,3 +4,37 @@
     border: 1px solid var(--border);
     border-radius: 12px;
 }
+
+.team {
+    margin-top: 20px;
+}
+
+.team__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 16px;
+}
+
+.team__card {
+    overflow: hidden;
+    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.team__photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.team__role {
+    margin-top: 0;
+}
+
+.team__profile {
+    color: var(--blue);
+}

@@ -33,10 +33,10 @@
 
 @layer components {
   .news__card--tailwind-demo {
-    @apply flex flex-col rounded-xl border border-brand-border bg-brand-surface p-[15px];
+    @apply flex flex-col rounded-xl border border-brand-border bg-brand-surface p-3.75;
   }
 
   .news__meta--tailwind-demo {
-    @apply mt-auto flex items-center justify-between rounded-lg p-[10px];
+    @apply mt-auto flex items-center justify-between rounded-lg p-2.5;
   }
 }

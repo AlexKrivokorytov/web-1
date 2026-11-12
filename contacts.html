@@ -1,29 +1,12 @@
-{{#> layout pageTitle="Contacts" pageCode="contacts" activeHome=false activeAbout=false activeContacts=true}}
-    <h2>Contact form</h2>
-    <form class="contact-form">
-        <div class="contact-form__item">
-            <label for="name">Name</label>
-            <input class="contact-form__input" id="name" type="text">
-        </div>
-
-        <div class="contact-form__item">
-            <label for="email">Email</label>
-            <input class="contact-form__input" id="email" type="email">
-        </div>
-
-        <div class="contact-form__item">
-            <label class="contact-form__label" for="phone">Phone:</label>
-            <input class="contact-form__input" id="phone" type="tel" name="phone" placeholder="+380XXXXXXXXX" required pattern="\+380[0-9]{9}" title="Enter a number in the format +380XXXXXXXXX" aria-describedby="phone-hint">
-            <small class="contact-form__hint" id="phone-hint">Format: +380XXXXXXXXX</small>
-        </div>
-
-        <div class="contact-form__item">
-            <label for="message">Message</label>
-            <textarea class="contact-form__textarea" id="message"></textarea>
-        </div>
-
-        <button class="contact-form__button" type="submit">
-            Send
-        </button>
-    </form>
-{{/layout}}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacts | Student Website</title>
+    </head>
+    <body data-page="contacts">
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
+</html>

@@ -1,26 +1,16 @@
-import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import handlebars from 'vite-plugin-handlebars';
-
-const root = process.cwd();
+import { resolve } from 'node:path';
 
 export default defineConfig({
-    plugins: [
-        tailwindcss(),
-        handlebars({
-            partialDirectory: resolve(root, 'src/partials'),
-            context: {
-                siteName: 'Student Website',
-            },
-        }),
-    ],
+    plugins: [react(), tailwindcss()],
     build: {
         rollupOptions: {
             input: {
-                index: resolve(root, 'index.html'),
-                about: resolve(root, 'about.html'),
-                contacts: resolve(root, 'contacts.html'),
+                index: resolve(import.meta.dirname, 'index.html'),
+                about: resolve(import.meta.dirname, 'about.html'),
+                contacts: resolve(import.meta.dirname, 'contacts.html'),
             },
         },
     },

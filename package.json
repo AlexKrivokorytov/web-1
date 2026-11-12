@@ -6,15 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.3.0",
     "autoprefixer": "^10.6.1",
     "postcss": "^8.5.31",
     "sass": "^1.106.0",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.5",
-    "vite-plugin-handlebars": "^2.0.3"
+    "vitest": "^4.1.12"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }

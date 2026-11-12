@@ -1,47 +1,12 @@
-{{#> layout pageTitle="Student Website" pageCode="main" activeHome=true activeAbout=false activeContacts=false}}
-    <h2>Latest News</h2>
-
-    <section class="news">
-        <article class="news__card news__card--tailwind-demo dark:ring-2 dark:ring-brand-blue">
-            <picture class="news__media">
-                <source srcset="/src/assets/images/student.avif" type="image/avif">
-                <source srcset="/src/assets/images/student.webp" type="image/webp">
-                <img class="news__image" src="/src/assets/images/student.jpg" alt="Student">
-            </picture>
-            <h3 class="news__title">Web Development</h3>
-            <p class="news__description">Learning HTML and CSS.</p>
-            <div class="news__meta news__meta--tailwind-demo">
-                <span>30.09.2026</span>
-                <a href="#">Read more</a>
-            </div>
-        </article>
-
-        <article class="news__card">
-            <picture class="news__media">
-                <source srcset="/src/assets/images/student.avif" type="image/avif">
-                <source srcset="/src/assets/images/student.webp" type="image/webp">
-                <img class="news__image" src="/src/assets/images/student.jpg" alt="Student">
-            </picture>
-            <h3 class="news__title">CSS Layout</h3>
-            <p class="news__description">Learning Flexbox and Grid.</p>
-            <div class="news__meta">
-                <span>30.09.2026</span>
-                <a href="#">Read more</a>
-            </div>
-        </article>
-
-        <article class="news__card">
-            <picture class="news__media">
-                <source srcset="/src/assets/images/student.avif" type="image/avif">
-                <source srcset="/src/assets/images/student.webp" type="image/webp">
-                <img class="news__image" src="/src/assets/images/student.jpg" alt="Student">
-            </picture>
-            <h3 class="news__title">GitHub</h3>
-            <p class="news__description">Practicing Git and GitHub.</p>
-            <div class="news__meta">
-                <span>30.09.2026</span>
-                <a href="#">Read more</a>
-            </div>
-        </article>
-    </section>
-{{/layout}}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Website</title>
+    </head>
+    <body data-page="home">
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
+</html>

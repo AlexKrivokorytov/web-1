@@ -9,6 +9,12 @@
     margin-top: 20px;
 }
 
+.team__search {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 10px;
+}
+
 .team__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
@@ -21,14 +27,6 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
-}
-
-.team__photo {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 11;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 .team__role {

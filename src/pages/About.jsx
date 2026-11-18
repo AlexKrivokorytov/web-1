@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
-import { getBackupPhoto, getFallbackEmployees, loadEmployees } from '../js/api/employees.js';
+import { useMemo, useState } from 'react';
+import EmployeeCard from '../components/EmployeeCard.jsx';
+import useFetchEmployees from '../hooks/useFetchEmployees.js';
+
+const EMPLOYEES_URL = 'https://jsonplaceholder.typicode.com/users';
 
 export default function About() {
-    const [employees, setEmployees] = useState(getFallbackEmployees);
-
-    useEffect(() => {
-        const controller = new AbortController();
-
-        loadEmployees(6, { signal: controller.signal })
-            .then(setEmployees)
-            .catch(() => {});
-
-        return () => controller.abort();
-    }, []);
+    const [query, setQuery] = useState('');
+    const { data: employees, loading, error } = useFetchEmployees(EMPLOYEES_URL);
+    const filteredEmployees = useMemo(() => {
+        const value = query.toLowerCase();
+        return employees.filter((employee) =>
+            employee.name.toLowerCase().includes(value)
+            || employee.company.name.toLowerCase().includes(value));
+    }, [employees, query]);
 
     return (
         <>
@@ -23,17 +23,14 @@ export default function About() {
             </section>
             <section className="team">
                 <h2>Our team</h2>
+                <input className="team__search" type="search" placeholder="Search employees" value={query} onChange={(event) => setQuery(event.target.value)} />
+                {loading && <p>Loading...</p>}
+                {error && <p>Failed to load employees.</p>}
+                {!loading && !error && <p>Showing {filteredEmployees.length} of {employees.length} employees</p>}
+                {!loading && !error && filteredEmployees.length === 0 && <p>No employees found.</p>}
                 <div className="team__list">
-                    {employees.map((employee) => (
-                        <article className="team__card" key={employee.id}>
-                            <img className="team__photo" src={employee.photo} alt={employee.name} onError={(event) => {
-                                const backup = getBackupPhoto(employee.id);
-                                if (event.currentTarget.src !== backup) event.currentTarget.src = backup;
-                            }} />
-                            <h3 className="team__name">{employee.name}</h3>
-                            <p className="team__role">{employee.role}</p>
-                            <a className="team__profile" href={employee.profileUrl} target="_blank" rel="noopener noreferrer">View profile</a>
-                        </article>
+                    {filteredEmployees.map((employee) => (
+                        <EmployeeCard employee={employee} key={employee.id} />
                     ))}
                 </div>
             </section>

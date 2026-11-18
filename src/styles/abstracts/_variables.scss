@@ -13,19 +13,13 @@
 }
 
 @mixin dark-theme {
-        --bg: #111827;
-        --surface: #1f2937;
-        --blue: #6495ed;
-        --dark-blue: #0b1420;
-        --yellow: #eabf4a;
-        --text: #e5e7eb;
-        --border: #374151;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme]) {
-        @include dark-theme;
-    }
+    --bg: #111827;
+    --surface: #1f2937;
+    --blue: #6495ed;
+    --dark-blue: #0b1420;
+    --yellow: #eabf4a;
+    --text: #e5e7eb;
+    --border: #374151;
 }
 
 :root[data-theme="dark"] {

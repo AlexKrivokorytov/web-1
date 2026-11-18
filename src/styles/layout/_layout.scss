@@ -1,5 +1,14 @@
+.app-theme-root,
 .layout {
     min-height: 100dvh;
+}
+
+.app-theme-root {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.layout {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;

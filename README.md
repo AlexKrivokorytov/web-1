@@ -1,6 +1,6 @@
-# Laboratory Work No. 10
+# Laboratory Work No. 11
 
-A simple React application built with Vite. It demonstrates `useState`, `useEffect`, `useContext`, `useMemo`, a fetch request, and pseudo-navigation.
+A React application with a basic `FormData` form and a validated React Hook Form form.
 
 ## Run
 
@@ -26,3 +26,5 @@ npm run preview
 - `src/pages/Home.jsx` stores the compact view state and renders the home page.
 - `src/pages/About.jsx` loads and filters employees.
 - `src/pages/Contacts.jsx` renders the contact form.
+- `src/sections/ContactFormBasic.jsx` sends `FormData`.
+- `src/sections/ContactFormRHF.jsx` validates fields and sends JSON with React Hook Form.

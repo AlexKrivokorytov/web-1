@@ -29,16 +29,16 @@
     cursor: pointer;
 }
 
-.contact-form :user-invalid {
-    border-color: #b42318;
+.form-switcher {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.contact-form__hint {
-    display: none;
+.contact-form__error {
     color: #b42318;
-    font-size: 0.9em;
 }
 
-#phone:user-invalid + .contact-form__hint {
-    display: block;
+.contact-form__status {
+    margin-bottom: 0;
 }
